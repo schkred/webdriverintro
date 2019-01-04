@@ -44,9 +44,9 @@ public class LoginViaMyAccountDropdown {
 		
 		Assert.assertEquals(actualURL, expectedURL, "Incorrect URL:");
 		
-		WebElement userNameOnHeader = driver.findElement(By);
+		WebElement userNameOnHeader = driver.findElement(By.cssSelector(".navbar .user_menu>li:nth-of-type(1)>a"));
 		
-		String actualUserNameOnHeader = myAccountButton.getText();
+		String actualUserNameOnHeader = userNameOnHeader.getText();
 		
 		Assert.assertEquals(actualUserNameOnHeader, "JOHNY", "Incorrect username: ");
 	}

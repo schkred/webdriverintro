@@ -6,7 +6,6 @@
       <class name="net.phptravels.auth.LoginViaMyAccountDropdown">
         <methods>
           <include name="testLoginViaMyAccount"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- net.phptravels.auth.LoginViaMyAccountDropdown -->
     </classes>
