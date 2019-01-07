@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-01-04T18:26:00Z" name="Default suite" finished-at="2019-01-04T18:26:11Z" duration-ms="10489">
+  <suite started-at="2019-01-07T15:42:34Z" name="Default suite" finished-at="2019-01-07T15:42:45Z" duration-ms="10598">
     <groups>
     </groups>
-    <test started-at="2019-01-04T18:26:00Z" name="Default test" finished-at="2019-01-04T18:26:11Z" duration-ms="10489">
-      <class name="net.phptravels.auth.LoginViaMyAccountDropdown">
-        <test-method signature="testLoginViaMyAccount()[pri:0, instance:net.phptravels.auth.LoginViaMyAccountDropdown@6ab778a]" started-at="2019-01-04T18:26:00Z" name="testLoginViaMyAccount" finished-at="2019-01-04T18:26:10Z" duration-ms="9690" status="PASS">
+    <test started-at="2019-01-07T15:42:34Z" name="Default test" finished-at="2019-01-07T15:42:45Z" duration-ms="10598">
+      <class name="net.phptravels.auth.LoginViaURLTest">
+        <test-method signature="testLoginViaURL()[pri:0, instance:net.phptravels.auth.LoginViaURLTest@c86b9e3]" started-at="2019-01-07T15:42:34Z" name="testLoginViaURL" finished-at="2019-01-07T15:42:44Z" duration-ms="9906" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginViaMyAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:net.phptravels.auth.LoginViaMyAccountDropdown@6ab778a]" started-at="2019-01-04T18:26:10Z" name="tearDown" finished-at="2019-01-04T18:26:11Z" duration-ms="776" status="PASS">
+        </test-method> <!-- testLoginViaURL -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:net.phptravels.auth.LoginViaURLTest@c86b9e3]" started-at="2019-01-07T15:42:44Z" name="tearDown" finished-at="2019-01-07T15:42:45Z" duration-ms="669" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- net.phptravels.auth.LoginViaMyAccountDropdown -->
+      </class> <!-- net.phptravels.auth.LoginViaURLTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
