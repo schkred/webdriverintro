@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import io.qameta.allure.Step;
+
 public class LoginPage {
 
 	private WebDriver driver;
@@ -12,6 +14,7 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
+	@Step("Login as username: {0} and password: {1}")
 	public AccountPage LoginAs(String username, String password) {
 		enterUserName(username);
 		enterPassword(password);
