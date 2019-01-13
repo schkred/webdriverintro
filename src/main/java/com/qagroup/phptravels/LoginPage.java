@@ -14,7 +14,7 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
-	@Step("Login as username: {0} and password: {1}")
+	@Step("Login as username: <{username}> and password: <{password}>")
 	public AccountPage LoginAs(String username, String password) {
 		enterUserName(username);
 		enterPassword(password);
@@ -22,16 +22,19 @@ public class LoginPage {
 		return new AccountPage(driver);
 	}
 
+	@Step("Enter username <{username}>")
 	public void enterUserName(String username) {
 		WebElement usernameField = driver.findElement(By.name("username"));
 		usernameField.sendKeys(username);
 	}
 
+	@Step("Enter password <{password}>")
 	public void enterPassword(String password) {
 		WebElement passwordField = driver.findElement(By.name("password"));
 		passwordField.sendKeys(password);
 	}
 
+	@Step("Click 'Login' button")
 	public void clickLoginButton() {
 		WebElement loginButton = driver.findElement(By.cssSelector(".loginbtn"));
 		loginButton.click();

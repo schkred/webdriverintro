@@ -7,13 +7,20 @@ import org.testng.annotations.Test;
 import com.qagroup.phptravels.AccountPage;
 import com.qagroup.phptravels.LoginPage;
 import com.qagroup.phptravels.PhpTravelsApp;
+import com.qagroup.tools.CustomAssert;
 
+import io.qameta.allure.*;
+
+@Epic("Authentication")
+@Feature("Login")
+@Story("Direct login")
 public class LoginViaURLTest {
 
 	private PhpTravelsApp phpTravelsApp = new PhpTravelsApp();
 	private LoginPage loginPage;
 	private AccountPage accountPage;
 
+	@Link("https://www.google.com/drive/")
 	@Test
 	public void testLoginViaURL() {
 		loginPage = phpTravelsApp.openLoginPage();
@@ -27,7 +34,8 @@ public class LoginViaURLTest {
 		Assert.assertEquals(actualURL, expectedURL, "Incorrect URL: ");
 
 		String actualUserNameOnHeader = accountPage.readUsername();
-		Assert.assertEquals(actualUserNameOnHeader.toLowerCase(), "johny", "Incorrect username: ");
+		//		Assert.assertEquals(actualUserNameOnHeader.toLowerCase(), "johny", "Incorrect username: ");
+		CustomAssert.assertEquals(actualUserNameOnHeader.toLowerCase(), "johny", "Username on Header should match Expected result");
 	}
 
 	@AfterMethod(alwaysRun = true)

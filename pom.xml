@@ -45,7 +45,7 @@
 					<version>2.9</version>
 					<configuration>
 						<reportVersion>2.7.0</reportVersion>
-						<resultsDirectory>../allure-results</resultsDirectory>
+						<resultsDirectory>allure-results</resultsDirectory>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -64,7 +64,6 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
-			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
 		<dependency>

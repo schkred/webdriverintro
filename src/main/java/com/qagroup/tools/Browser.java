@@ -7,11 +7,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Step;
 
 public class Browser {
 
 	private static WebDriver driver;
 
+	@Step("Open browser: ")
 	public static WebDriver open() {
 		WebDriver driver = startBrowser();
 		driver.manage().window().maximize();
@@ -29,6 +31,7 @@ public class Browser {
 		return driver;
 	}
 
+	@Step("Google Chrome")
 	private static WebDriver startChrome() {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
@@ -36,6 +39,7 @@ public class Browser {
 		return new ChromeDriver();
 	}
 
+	@Step("Firefox")
 	private static WebDriver startFirefox() {
 		WebDriverManager.firefoxdriver().setup();
 		FirefoxOptions options = new FirefoxOptions();
