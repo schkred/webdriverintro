@@ -34,8 +34,10 @@ public class LoginViaURLTest {
 		Assert.assertEquals(actualURL, expectedURL, "Incorrect URL: ");
 
 		String actualUserNameOnHeader = accountPage.readUsername();
-		//		Assert.assertEquals(actualUserNameOnHeader.toLowerCase(), "johny", "Incorrect username: ");
-		CustomAssert.assertEquals(actualUserNameOnHeader.toLowerCase(), "johny", "Username on Header should match Expected result");
+		// Assert.assertEquals(actualUserNameOnHeader.toLowerCase(), "johny", "Incorrect
+		// username: ");
+		CustomAssert.assertEquals(actualUserNameOnHeader.toLowerCase(), "johny",
+				"Username on Header should match Expected result");
 	}
 
 	@AfterMethod(alwaysRun = true)

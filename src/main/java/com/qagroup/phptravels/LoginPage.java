@@ -1,17 +1,28 @@
 package com.qagroup.phptravels;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import io.qameta.allure.Step;
 
 public class LoginPage {
 
+	@FindBy(name = "username")
+	private WebElement usernameField;
+	
+	@FindBy(name = "password")
+	private WebElement passwordField;
+	
+	@FindBy(css = ".loginbtn")
+	private WebElement loginButton;
+	
 	private WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(this.driver, this);
 	}
 
 	@Step("Login as username: <{username}> and password: <{password}>")
@@ -24,19 +35,16 @@ public class LoginPage {
 
 	@Step("Enter username <{username}>")
 	public void enterUserName(String username) {
-		WebElement usernameField = driver.findElement(By.name("username"));
 		usernameField.sendKeys(username);
 	}
 
 	@Step("Enter password <{password}>")
 	public void enterPassword(String password) {
-		WebElement passwordField = driver.findElement(By.name("password"));
 		passwordField.sendKeys(password);
 	}
 
 	@Step("Click 'Login' button")
 	public void clickLoginButton() {
-		WebElement loginButton = driver.findElement(By.cssSelector(".loginbtn"));
 		loginButton.click();
 	}
 }
