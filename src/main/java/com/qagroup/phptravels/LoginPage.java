@@ -7,20 +7,21 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.qameta.allure.Step;
 
-public class LoginPage {
+public class LoginPage extends GenericPhpTravelsApp{
 
 	@FindBy(name = "username")
 	private WebElement usernameField;
-	
+
 	@FindBy(name = "password")
 	private WebElement passwordField;
-	
+
 	@FindBy(css = ".loginbtn")
 	private WebElement loginButton;
-	
+
 	private WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}

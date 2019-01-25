@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.qameta.allure.Step;
 
-public class MainPage {
+public class MainPage extends GenericPhpTravelsApp{
 
 	private WebDriver driver;
 
@@ -19,6 +19,7 @@ public class MainPage {
 	private WebElement myAccountDropdown;
 
 	public MainPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}

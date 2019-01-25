@@ -8,14 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 
-public class AccountPage {
+public class AccountPage extends GenericPhpTravelsApp{
 
 	@FindBy(css = ".navbar .user_menu>li:nth-of-type(1)>a")
 	private WebElement userNameOnHeader;
-	
+
 	private WebDriver driver;
 
 	public AccountPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}
