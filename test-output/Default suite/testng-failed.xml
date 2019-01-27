@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="net.phptravels.auth.LoginViaURLTest">
+      <class name="net.phptravels.booking.CheckInDatePickerTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="testLoginViaURL"/>
+          <include name="testHotelBooking"/>
         </methods>
-      </class> <!-- net.phptravels.auth.LoginViaURLTest -->
+      </class> <!-- net.phptravels.booking.CheckInDatePickerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

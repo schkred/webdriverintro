@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.qagroup.phptravels.ui.TopNavigationBar;
+
 public class GenericPhpTravelsApp {
 
 	@FindBy(css="nav.navbar-default")
-	private WebElement navigationBar;
+	private WebElement topNavigationBar;
 
 	private WebDriver driver;
 
@@ -17,8 +19,8 @@ public class GenericPhpTravelsApp {
 		PageFactory.initElements(this.driver, this);
 	}
 
-	public NavigationBar navigationBar() {
-		return new NavigationBar(navigationBar);
+	public TopNavigationBar topNavigationBar() {
+		return new TopNavigationBar(topNavigationBar);
 	}
 
 }

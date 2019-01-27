@@ -1,22 +1,19 @@
 package com.qagroup.phptravels;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import io.qameta.allure.Step;
+import com.qagroup.phptravels.ui.MainBookingPanel;
 
-public class MainPage extends GenericPhpTravelsApp{
+public class MainPage extends GenericPhpTravelsApp {
 
 	private WebDriver driver;
 
-	@FindBy(css = ".navbar #li_myaccount")
-	private WebElement myAccountButton;
-
-	@FindBy(css = ".navbar #li_myaccount .dropdown-menu")
-	private WebElement myAccountDropdown;
+	// Main panel on the Home page where user can book Hotel, Flight, etc.
+	@FindBy(css = ".cell .col-md-12:not(.col-xs-6)")
+	private WebElement mainBookingPanel;
 
 	public MainPage(WebDriver driver) {
 		super(driver);
@@ -24,12 +21,7 @@ public class MainPage extends GenericPhpTravelsApp{
 		PageFactory.initElements(this.driver, this);
 	}
 
-	@Step("Navigate to Login page")
-	public LoginPage navigateToLoginPage() {
-		myAccountButton.click();
-
-		WebElement loginOption = myAccountDropdown.findElement(By.xpath(".//a[contains(text(), 'Login')]"));
-		loginOption.click();
-		return new LoginPage(driver);
+	public MainBookingPanel mainBookingPanel() {
+		return new MainBookingPanel(mainBookingPanel);
 	}
 }
