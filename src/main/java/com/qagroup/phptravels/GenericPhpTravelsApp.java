@@ -9,7 +9,7 @@ import com.qagroup.phptravels.ui.TopNavigationBar;
 
 public class GenericPhpTravelsApp {
 
-	@FindBy(css="nav.navbar-default")
+	@FindBy(css = "nav.navbar-default")
 	private WebElement topNavigationBar;
 
 	private WebDriver driver;

@@ -7,12 +7,12 @@ import com.qagroup.tools.Browser;
 import io.qameta.allure.Step;
 
 public class PhpTravelsApp {
-	
+
 	private static final String MAIN_PAGE = "http://www.phptravels.net";
 	private static final String LOGIN_PAGE_URL = "https://www.phptravels.net/login";
-	
+
 	private WebDriver driver;
-	
+
 	@Step("Open the application")
 	public MainPage openMainPage() {
 		if (driver == null)

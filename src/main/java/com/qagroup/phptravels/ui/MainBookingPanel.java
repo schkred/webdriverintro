@@ -13,21 +13,11 @@ public class MainBookingPanel {
 	@FindBy(css = "li[data-title='hotels']")
 	private WebElement hotelsTab;
 
-	@FindBy(css = "[name=checkin]")
-	private WebElement checkInField;
-
-	@FindBy(css = ".datepicker[style*='display: block']")
-	private WebElement datePicker;
-
 	private SearchContext root;
 
-	public MainBookingPanel (WebElement root) {
+	public MainBookingPanel(WebElement root) {
 		this.root = root;
 		PageFactory.initElements(new DefaultElementLocatorFactory(root), this);
-	}
-
-	public DatePicker datePicker() {
-		return new DatePicker(datePicker);
 	}
 
 	@Step("Select 'Hotels' tab on Main booking panel")
@@ -35,9 +25,4 @@ public class MainBookingPanel {
 		hotelsTab.click();
 	}
 
-	@Step("Open 'Check in' date picker")
-	public DatePicker openHotelsCheckInDatePicker() {
-		checkInField.click();
-		return datePicker();
-	}
 }
