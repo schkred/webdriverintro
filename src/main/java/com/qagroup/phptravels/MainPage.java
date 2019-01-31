@@ -13,24 +13,18 @@ import io.qameta.allure.Step;
 
 public class MainPage extends GenericPhpTravelsApp {
 
-	private WebDriver driver;
+	protected WebDriver driver;
 
 	@FindBy(css = ".navbar #li_myaccount")
 	private WebElement myAccountButton;
-	
+
 	@FindBy(css = ".navbar li#li_myaccount .dropdown-menu")
 	private WebElement myAccountDropdown;
-	
+
 	// Main panel on the Home page where user can book Hotel, Flight, etc.
 	@FindBy(css = ".cell .col-md-12:not(.col-xs-6)")
 	private WebElement mainBookingPanel;
-	
-	@FindBy(css = "[name=checkin]")
-	private WebElement checkInField;
-	
-	@FindBy(css = "[name=checkout]")
-	private WebElement checkOutField;
-	
+
 	@FindBy(css = ".datepicker[style*='display: block']")
 	private WebElement datePicker;
 
@@ -43,23 +37,11 @@ public class MainPage extends GenericPhpTravelsApp {
 	public MainBookingPanel mainBookingPanel() {
 		return new MainBookingPanel(mainBookingPanel);
 	}
-	
+
 	public DatePicker datePicker() {
 		return new DatePicker(datePicker);
 	}
-	
-	@Step("Open 'Check in' date picker")
-	public DatePicker openHotelsCheckInDatePicker() {
-		checkInField.click();
-		return datePicker();
-	}
-	
-	@Step("Open 'Check out' date picker")
-	public DatePicker openHotelsCheckOutDatePicker() {
-		checkOutField.click();
-		return datePicker();
-	}
-	
+
 	@Step("Navigate to Login page")
 	public LoginPage navigateToLoginPage() {
 		myAccountButton.click();

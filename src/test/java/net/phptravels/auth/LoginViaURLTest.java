@@ -1,5 +1,6 @@
 package net.phptravels.auth;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -19,14 +20,15 @@ public class LoginViaURLTest {
 	private PhpTravelsApp phpTravelsApp = new PhpTravelsApp();
 	private LoginPage loginPage;
 	private AccountPage accountPage;
+	private WebDriver driver;
 
 	@Link("https://www.google.com/drive/")
 	@Test
 	public void testLoginViaURL() {
 		loginPage = phpTravelsApp.openLoginPage();
-		waitFor(2);
+		waitFor(1);
 		accountPage = loginPage.LoginAs("user@phptravels.com", "demouser");
-		waitFor(2);
+		waitFor(1);
 
 		String actualURL = accountPage.getCurrentUrl();
 		String expectedURL = "https://www.phptravels.net/account/";

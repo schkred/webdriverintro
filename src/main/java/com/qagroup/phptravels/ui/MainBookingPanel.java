@@ -6,12 +6,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 
+import com.qagroup.phptravels.MainPage;
+
 import io.qameta.allure.Step;
 
 public class MainBookingPanel {
 
 	@FindBy(css = "li[data-title='hotels']")
 	private WebElement hotelsTab;
+	
+	@FindBy(css = "[name=checkin]")
+	private WebElement checkInField;
+	
+	@FindBy(css = "[name=checkout]")
+	private WebElement checkOutField;
 
 	private SearchContext root;
 
@@ -25,4 +33,15 @@ public class MainBookingPanel {
 		hotelsTab.click();
 	}
 
+	@Step("Open 'Check in' date picker")
+	public DatePicker openHotelsCheckInDatePicker() {
+		checkInField.click();
+		return datePicker();
+	}
+	
+	@Step("Open 'Check out' date picker")
+	public DatePicker openHotelsCheckOutDatePicker() {
+		checkOutField.click();
+		return datePicker();
+	}
 }
