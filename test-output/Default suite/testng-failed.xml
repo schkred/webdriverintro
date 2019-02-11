@@ -6,6 +6,7 @@
       <class name="net.phptravels.booking.CheckInDatePickerTest">
         <methods>
           <include name="testHotelBooking"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- net.phptravels.booking.CheckInDatePickerTest -->
     </classes>

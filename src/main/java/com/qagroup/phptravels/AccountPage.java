@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 
-public class AccountPage extends GenericPhpTravelsApp{
+public class AccountPage extends BasePhpTravelsApp{
 
 	@FindBy(css = ".navbar .user_menu>li:nth-of-type(1)>a")
 	private WebElement userNameOnHeader;

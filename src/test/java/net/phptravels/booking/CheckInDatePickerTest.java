@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.qagroup.phptravels.MainPage;
 import com.qagroup.phptravels.PhpTravelsApp;
 import com.qagroup.phptravels.ui.DatePicker;
+import com.qagroup.phptravels.ui.MainBookingPanel;
 
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -25,7 +26,7 @@ public class CheckInDatePickerTest {
 	@Test
 	public void testHotelBooking() {
 		mainPage = phpTravelsApp.openMainPage();
-		datePicker = mainPage.openHotelsCheckInDatePicker();
+		datePicker = mainPage.mainBookingPanel().openHotelsCheckInDatePicker();
 		waitFor(1);
 
 		LocalDate checkInDate = LocalDate.now().plusYears(1).plusMonths(1).plusDays(10);
@@ -33,12 +34,13 @@ public class CheckInDatePickerTest {
 		datePicker.selectDate(checkInDate);
 		waitFor(1);
 		datePicker.selectDate(checkInDate.plusWeeks(1));
+		waitFor(1);
 	}
 
-	// @AfterMethod(alwaysRun = true)
-	// private void tearDown() {
-	// phpTravelsApp.close();
-	// }
+	@AfterMethod(alwaysRun = true)
+	private void tearDown() {
+		phpTravelsApp.close();
+	}
 
 	private void waitFor(int seconds) {
 		try {

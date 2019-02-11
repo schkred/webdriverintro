@@ -20,8 +20,10 @@ public class MainBookingPanel {
 	
 	@FindBy(css = "[name=checkout]")
 	private WebElement checkOutField;
-
+	
 	private SearchContext root;
+
+	private WebElement driver;
 
 	public MainBookingPanel(WebElement root) {
 		this.root = root;
@@ -36,12 +38,11 @@ public class MainBookingPanel {
 	@Step("Open 'Check in' date picker")
 	public DatePicker openHotelsCheckInDatePicker() {
 		checkInField.click();
-		return datePicker();
+		return DatePicker();
 	}
 	
 	@Step("Open 'Check out' date picker")
-	public DatePicker openHotelsCheckOutDatePicker() {
+	public void openHotelsCheckOutDatePicker() {
 		checkOutField.click();
-		return datePicker();
 	}
 }

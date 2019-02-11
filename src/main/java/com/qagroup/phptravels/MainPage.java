@@ -11,7 +11,7 @@ import com.qagroup.phptravels.ui.MainBookingPanel;
 
 import io.qameta.allure.Step;
 
-public class MainPage extends GenericPhpTravelsApp {
+public class MainPage extends BasePhpTravelsApp {
 
 	protected WebDriver driver;
 
@@ -25,9 +25,6 @@ public class MainPage extends GenericPhpTravelsApp {
 	@FindBy(css = ".cell .col-md-12:not(.col-xs-6)")
 	private WebElement mainBookingPanel;
 
-	@FindBy(css = ".datepicker[style*='display: block']")
-	private WebElement datePicker;
-
 	public MainPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -38,14 +35,9 @@ public class MainPage extends GenericPhpTravelsApp {
 		return new MainBookingPanel(mainBookingPanel);
 	}
 
-	public DatePicker datePicker() {
-		return new DatePicker(datePicker);
-	}
-
 	@Step("Navigate to Login page")
 	public LoginPage navigateToLoginPage() {
 		myAccountButton.click();
-
 		WebElement loginOption = myAccountDropdown.findElement(By.xpath(".//a[contains(.,'Login')]"));
 		loginOption.click();
 		return new LoginPage(driver);
