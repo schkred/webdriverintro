@@ -7,11 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 
-public class AccountPage extends BasePhpTravelsApp{
+public class AccountPage extends BasePhpTravels{
 
+	private WebDriver driver;
+	
 	@FindBy(css = ".navbar .user_menu>li:nth-of-type(1)>a")
 	private WebElement userNameOnHeader;
-	private WebDriver driver;
 
 	public AccountPage(WebDriver driver) {
 		super(driver);

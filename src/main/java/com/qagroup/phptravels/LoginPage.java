@@ -8,8 +8,10 @@ import com.qagroup.tools.AbstractWebPage;
 
 import io.qameta.allure.Step;
 
-public class LoginPage extends AbstractWebPage{
+public class LoginPage extends BasePhpTravels {
 
+	private WebDriver driver;
+	
 	@FindBy(name = "username")
 	private WebElement usernameField;
 
@@ -18,8 +20,6 @@ public class LoginPage extends AbstractWebPage{
 
 	@FindBy(css = ".loginbtn")
 	private WebElement loginButton;
-
-	private WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
 		super(driver);

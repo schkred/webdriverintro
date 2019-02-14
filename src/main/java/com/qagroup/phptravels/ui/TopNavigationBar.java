@@ -15,6 +15,10 @@ import io.qameta.allure.Step;
 
 public class TopNavigationBar {
 
+	private WebDriver driver;
+	
+	private SearchContext root;
+	
 	@FindBy(xpath = ".//li [a/text()='Home']")
 	private WebElement homeTab;
 
@@ -23,10 +27,6 @@ public class TopNavigationBar {
 
 	@FindBy(css = ".navbar #li_myaccount .dropdown-menu")
 	private WebElement myAccountDropdown;
-
-	private SearchContext root;
-
-	private WebDriver driver;
 
 	public TopNavigationBar(WebElement root) {
 		this.root = root;

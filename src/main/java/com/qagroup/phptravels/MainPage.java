@@ -11,7 +11,7 @@ import com.qagroup.phptravels.ui.MainBookingPanel;
 
 import io.qameta.allure.Step;
 
-public class MainPage extends BasePhpTravelsApp {
+public class MainPage extends BasePhpTravels {
 
 	protected WebDriver driver;
 
@@ -27,7 +27,6 @@ public class MainPage extends BasePhpTravelsApp {
 
 	public MainPage(WebDriver driver) {
 		super(driver);
-		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}
 

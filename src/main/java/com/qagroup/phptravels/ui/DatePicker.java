@@ -17,6 +17,8 @@ import io.qameta.allure.Step;
 
 public class DatePicker {
 
+	private SearchContext root;
+
 	@FindBy(css = ".datepicker-days .prev")
 	private WebElement previousMonthArrow;
 
@@ -37,8 +39,6 @@ public class DatePicker {
 
 	@FindBy(css = ".datepicker-days .day.new")
 	private List<WebElement> nextMonthDays;
-
-	private SearchContext root;
 
 	public DatePicker(WebElement root) {
 		PageFactory.initElements(new DefaultElementLocatorFactory(root), this);

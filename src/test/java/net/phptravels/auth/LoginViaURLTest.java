@@ -30,7 +30,7 @@ public class LoginViaURLTest {
 		accountPage = loginPage.LoginAs("user@phptravels.com", "demouser");
 		waitFor(1);
 
-		String actualURL = accountPage.getCurrentUrl();
+		String actualURL = accountPage.readCurrentUrl();
 		String expectedURL = "https://www.phptravels.net/account/";
 
 		Assert.assertEquals(actualURL, expectedURL, "Incorrect URL: ");

@@ -24,7 +24,7 @@ public class CheckInDatePickerTest {
 	private DatePicker datePicker;
 
 	@Test
-	public void testHotelBooking() {
+	public void testHotelBooking () {
 		mainPage = phpTravelsApp.openMainPage();
 		datePicker = mainPage.mainBookingPanel().openHotelsCheckInDatePicker();
 		waitFor(1);
