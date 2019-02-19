@@ -2,18 +2,27 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-02-18T16:20:39Z" name="Default suite" finished-at="2019-02-18T16:20:51Z" duration-ms="11481">
+  <suite started-at="2019-02-19T19:26:53Z" name="Default suite" finished-at="2019-02-19T19:27:12Z" duration-ms="19333">
     <groups>
     </groups>
-    <test started-at="2019-02-18T16:20:39Z" name="Default test" finished-at="2019-02-18T16:20:51Z" duration-ms="11481">
+    <test started-at="2019-02-19T19:26:53Z" name="Default test" finished-at="2019-02-19T19:27:12Z" duration-ms="19333">
       <class name="net.phptravels.booking.CheckInDatePickerTest">
-        <test-method signature="testHotelBooking()[pri:0, instance:net.phptravels.booking.CheckInDatePickerTest@43da41e]" started-at="2019-02-18T16:20:39Z" name="testHotelBooking" finished-at="2019-02-18T16:20:49Z" duration-ms="9690" status="FAIL">
+        <test-method signature="testHotelBooking()[pri:0, instance:net.phptravels.booking.CheckInDatePickerTest@65b66b08]" started-at="2019-02-19T19:26:53Z" name="testHotelBooking" finished-at="2019-02-19T19:27:11Z" duration-ms="18232" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.qagroup.phptravels.ui.MainBookingPanel.<init>(MainBookingPanel.java:21)
-at com.qagroup.phptravels.MainPage.mainBookingPanel(MainPage.java:33)
-at net.phptravels.booking.CheckInDatePickerTest.testHotelBooking(CheckInDatePickerTest.java:29)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy20.findElement(Unknown Source)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy20.click(Unknown Source)
+at com.qagroup.phptravels.ui.MainBookingPanel.openHotelsCheckInDatePicker_aroundBody2(MainBookingPanel.java:44)
+at com.qagroup.phptravels.ui.MainBookingPanel$AjcClosure3.run(MainBookingPanel.java:1)
+at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)
+at com.qagroup.phptravels.ui.MainBookingPanel.openHotelsCheckInDatePicker(MainBookingPanel.java:44)
+at net.phptravels.booking.CheckInDatePickerTest.testHotelBooking(CheckInDatePickerTest.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -45,7 +54,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHotelBooking -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:net.phptravels.booking.CheckInDatePickerTest@43da41e]" started-at="2019-02-18T16:20:49Z" name="tearDown" finished-at="2019-02-18T16:20:51Z" duration-ms="1300" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:net.phptravels.booking.CheckInDatePickerTest@65b66b08]" started-at="2019-02-19T19:27:11Z" name="tearDown" finished-at="2019-02-19T19:27:12Z" duration-ms="827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

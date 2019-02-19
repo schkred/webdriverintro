@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 18 18:20:39 EET 2019</td>
+<td>Started on:</td><td>Tue Feb 19 21:26:53 EET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11481 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19333 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,9 +77,18 @@ function toggleAllBoxes() {
 <tr>
 <td title='net.phptravels.booking.CheckInDatePickerTest.testHotelBooking()'><b>testHotelBooking</b><br>Test class: net.phptravels.booking.CheckInDatePickerTest</td>
 <td><div><pre>java.lang.NullPointerException
-	at com.qagroup.phptravels.ui.MainBookingPanel.&lt;init&gt;(MainBookingPanel.java:21)
-	at com.qagroup.phptravels.MainPage.mainBookingPanel(MainPage.java:33)
-	at net.phptravels.booking.CheckInDatePickerTest.testHotelBooking(CheckInDatePickerTest.java:29)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy20.findElement(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy20.click(Unknown Source)
+	at com.qagroup.phptravels.ui.MainBookingPanel.openHotelsCheckInDatePicker_aroundBody2(MainBookingPanel.java:44)
+	at com.qagroup.phptravels.ui.MainBookingPanel$AjcClosure3.run(MainBookingPanel.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)
+	at com.qagroup.phptravels.ui.MainBookingPanel.openHotelsCheckInDatePicker(MainBookingPanel.java:44)
+	at net.phptravels.booking.CheckInDatePickerTest.testHotelBooking(CheckInDatePickerTest.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -105,11 +114,20 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1631675519", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1631675519'><pre>java.lang.NullPointerException
-	at com.qagroup.phptravels.ui.MainBookingPanel.&lt;init&gt;(MainBookingPanel.java:21)
-	at com.qagroup.phptravels.MainPage.mainBookingPanel(MainPage.java:33)
-	at net.phptravels.booking.CheckInDatePickerTest.testHotelBooking(CheckInDatePickerTest.java:29)
+</pre></div><a href='#' onClick='toggleBox("stack-trace118105337", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace118105337'><pre>java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy20.findElement(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy20.click(Unknown Source)
+	at com.qagroup.phptravels.ui.MainBookingPanel.openHotelsCheckInDatePicker_aroundBody2(MainBookingPanel.java:44)
+	at com.qagroup.phptravels.ui.MainBookingPanel$AjcClosure3.run(MainBookingPanel.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)
+	at com.qagroup.phptravels.ui.MainBookingPanel.openHotelsCheckInDatePicker(MainBookingPanel.java:44)
+	at net.phptravels.booking.CheckInDatePickerTest.testHotelBooking(CheckInDatePickerTest.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -136,8 +154,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>9</td>
-<td>net.phptravels.booking.CheckInDatePickerTest@43da41e</td></tr>
+<td>18</td>
+<td>net.phptravels.booking.CheckInDatePickerTest@65b66b08</td></tr>
 </table><p>
 </body>
 </html>

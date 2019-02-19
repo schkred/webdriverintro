@@ -1,29 +1,29 @@
 package com.qagroup.phptravels.ui;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 
-
 import io.qameta.allure.Step;
 
 public class MainBookingPanel {
 
+	//	@FindBy(css = ".cell .col-md-12:not(.col-xs-6)")
 	private SearchContext root;
 
 	@FindBy(css = ".datepicker[style*='display: block']")
 	private WebElement datePicker;
 
-	private WebElement hotelsTab = root.findElement(By.cssSelector("[data-title='hotels']"));
+	@FindBy(css = "[data-title='hotels']")
+	private WebElement hotelsTab;
 
-	private WebElement checkInField = root.findElement(By.cssSelector("[name=checkin]"));
+	@FindBy(css = "[name=checkin]")
+	private WebElement checkInField;
 
-	private WebElement checkOutField = root.findElement(By.cssSelector("[name=checkout]"));
-
+	@FindBy(css = "[name=checkout]")
+	private WebElement checkOutField;
 
 	public MainBookingPanel(WebElement root) {
 		this.root = root;
