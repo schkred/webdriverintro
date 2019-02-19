@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 
-public class AccountPage extends BasePhpTravels{
+public class AccountPage extends BasePhpTravelsPage{
 
 	private WebDriver driver;
 	

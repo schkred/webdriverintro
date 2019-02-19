@@ -6,12 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.qagroup.phptravels.ui.DatePicker;
 import com.qagroup.phptravels.ui.MainBookingPanel;
 
 import io.qameta.allure.Step;
 
-public class MainPage extends BasePhpTravels {
+public class MainPage extends BasePhpTravelsPage {
 
 	protected WebDriver driver;
 
@@ -30,7 +29,7 @@ public class MainPage extends BasePhpTravels {
 		PageFactory.initElements(this.driver, this);
 	}
 
-	public MainBookingPanel mainBookingPanel() {
+	public MainBookingPanel getMainBookingPanel() {
 		return new MainBookingPanel(mainBookingPanel);
 	}
 

@@ -4,11 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.qagroup.tools.AbstractWebPage;
-
 import io.qameta.allure.Step;
 
-public class LoginPage extends BasePhpTravels {
+public class LoginPage extends BasePhpTravelsPage {
 
 	private WebDriver driver;
 	

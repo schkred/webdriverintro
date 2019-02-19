@@ -21,12 +21,17 @@ public class CheckInDatePickerTest {
 
 	private PhpTravelsApp phpTravelsApp = new PhpTravelsApp();
 	private MainPage mainPage;
+	MainBookingPanel mainBookingPanel;
 	private DatePicker datePicker;
 
 	@Test
 	public void testHotelBooking () {
 		mainPage = phpTravelsApp.openMainPage();
-		datePicker = mainPage.mainBookingPanel().openHotelsCheckInDatePicker();
+		mainBookingPanel = mainPage.getMainBookingPanel();
+//		System.out.println(mainBookingPanel.toString());
+		datePicker = mainBookingPanel.openHotelsCheckInDatePicker();
+//		System.out.println(datePicker.toString());
+		
 		waitFor(1);
 
 		LocalDate checkInDate = LocalDate.now().plusYears(1).plusMonths(1).plusDays(10);

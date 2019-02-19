@@ -9,7 +9,7 @@ public class BookHotelByCityNameTest {
 	
 	public void testBookingHotelByCityName() {
 		mainPage = phpTtravelsApp.openMainPage();
-		mainPage.mainBookingPanel().selectHotelsTab();
+		mainPage.getMainBookingPanel().selectHotelsTab();
 		
 	}
 }

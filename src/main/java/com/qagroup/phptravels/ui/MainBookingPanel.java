@@ -1,5 +1,6 @@
 package com.qagroup.phptravels.ui;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,29 +8,30 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 
-import com.qagroup.phptravels.BasePhpTravels;
 
 import io.qameta.allure.Step;
 
-public class MainBookingPanel extends BasePhpTravels {
+public class MainBookingPanel {
 
 	private SearchContext root;
 
-	@FindBy(css = "li[data-title='hotels']")
-	private WebElement hotelsTab;
+	@FindBy(css = ".datepicker[style*='display: block']")
+	private WebElement datePicker;
 
-	@FindBy(css = "[name=checkin]")
-	private WebElement checkInField;
+	private WebElement hotelsTab = root.findElement(By.cssSelector("[data-title='hotels']"));
 
-	@FindBy(css = "[name=checkout]")
-	private WebElement checkOutField;
+	private WebElement checkInField = root.findElement(By.cssSelector("[name=checkin]"));
 
-	private static WebDriver driver;
+	private WebElement checkOutField = root.findElement(By.cssSelector("[name=checkout]"));
+
 
 	public MainBookingPanel(WebElement root) {
-		super(driver);
 		this.root = root;
 		PageFactory.initElements(new DefaultElementLocatorFactory(root), this);
+	}
+
+	public DatePicker getDatePicker() {
+		return new DatePicker(datePicker);
 	}
 
 	@Step("Select 'Hotels' tab on Main booking panel")
@@ -40,12 +42,12 @@ public class MainBookingPanel extends BasePhpTravels {
 	@Step("Open 'Check in' date picker")
 	public DatePicker openHotelsCheckInDatePicker() {
 		checkInField.click();
-		return new DatePicker(datePicker);
+		return getDatePicker();
 	}
 
 	@Step("Open 'Check out' date picker")
 	public DatePicker openHotelsCheckOutDatePicker() {
 		checkOutField.click();
-		return datePicker();
+		return getDatePicker();
 	}
 }
