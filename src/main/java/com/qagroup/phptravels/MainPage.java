@@ -26,6 +26,7 @@ public class MainPage extends BasePhpTravelsPage {
 
 	public MainPage(WebDriver driver) {
 		super(driver);
+		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}
 

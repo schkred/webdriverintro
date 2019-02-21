@@ -10,11 +10,7 @@ import io.qameta.allure.Step;
 
 public class MainBookingPanel {
 
-	//	@FindBy(css = ".cell .col-md-12:not(.col-xs-6)")
 	private SearchContext root;
-
-	@FindBy(css = ".datepicker[style*='display: block']")
-	private WebElement datePicker;
 
 	@FindBy(css = "[data-title='hotels']")
 	private WebElement hotelsTab;
@@ -25,13 +21,9 @@ public class MainBookingPanel {
 	@FindBy(css = "[name=checkout]")
 	private WebElement checkOutField;
 
-	public MainBookingPanel(WebElement root) {
-		this.root = root;
+	public MainBookingPanel(WebElement mainBookingPanel) {
+		this.root = mainBookingPanel;
 		PageFactory.initElements(new DefaultElementLocatorFactory(root), this);
-	}
-
-	public DatePicker getDatePicker() {
-		return new DatePicker(datePicker);
 	}
 
 	@Step("Select 'Hotels' tab on Main booking panel")
@@ -40,14 +32,12 @@ public class MainBookingPanel {
 	}
 
 	@Step("Open 'Check in' date picker")
-	public DatePicker openHotelsCheckInDatePicker() {
+	public void openHotelsCheckIn() {
 		checkInField.click();
-		return getDatePicker();
 	}
 
 	@Step("Open 'Check out' date picker")
-	public DatePicker openHotelsCheckOutDatePicker() {
+	public void openHotelsCheckOut() {
 		checkOutField.click();
-		return getDatePicker();
 	}
 }

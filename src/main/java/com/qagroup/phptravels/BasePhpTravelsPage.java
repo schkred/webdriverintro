@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.qagroup.phptravels.ui.DatePicker;
 import com.qagroup.phptravels.ui.TopNavigationBar;
 
 import io.qameta.allure.Attachment;
@@ -12,10 +13,13 @@ import io.qameta.allure.Step;
 
 public class BasePhpTravelsPage {
 
+	private WebDriver driver;
+	
 	@FindBy(css = "nav.navbar-default")
 	private WebElement topNavigationBar;
-
-	private WebDriver driver;
+	
+	@FindBy(css = ".datepicker[style*='display: block']")
+	private WebElement datePicker;
 
 	public BasePhpTravelsPage(WebDriver driver) {
 		this.driver = driver;
@@ -30,6 +34,10 @@ public class BasePhpTravelsPage {
 	@Attachment("URL")
 	public String readCurrentURL(WebDriver driver) {
 		return this.driver.getCurrentUrl();
+	}
+	
+	public DatePicker getDatePicker() {
+		return new DatePicker(datePicker);
 	}
 
 }

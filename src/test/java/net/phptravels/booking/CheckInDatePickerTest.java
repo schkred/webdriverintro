@@ -27,10 +27,8 @@ public class CheckInDatePickerTest {
 	@Test
 	public void testHotelBooking () {
 		mainPage = phpTravelsApp.openMainPage();
-		mainBookingPanel = mainPage.getMainBookingPanel();
-//		System.out.println(mainBookingPanel.toString());
-		datePicker = mainBookingPanel.openHotelsCheckInDatePicker();
-//		System.out.println(datePicker.toString());
+		mainPage.getMainBookingPanel().openHotelsCheckIn();
+		datePicker = mainPage.getDatePicker();
 		
 		waitFor(1);
 

@@ -41,6 +41,7 @@ public class DatePicker {
 	private List<WebElement> nextMonthDays;
 
 	public DatePicker(WebElement root) {
+		this.root = root;
 		PageFactory.initElements(new DefaultElementLocatorFactory(root), this);
 	}
 

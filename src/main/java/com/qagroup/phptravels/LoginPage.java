@@ -3,6 +3,7 @@ package com.qagroup.phptravels;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import io.qameta.allure.Step;
 
@@ -21,6 +22,8 @@ public class LoginPage extends BasePhpTravelsPage {
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(this.driver, this);
 	}
 
 	@Step("Login as username: <{username}> and password: <{password}>")
