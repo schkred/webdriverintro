@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\SYurivych\AppData\Local\Temp\testng-eclipse-248366422\testng-customsuite.xml</span>
+                    <span>C:\Users\Schkred\AppData\Local\Temp\testng-eclipse-2009136209\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -128,43 +128,17 @@
                   <a name="testBookingHotelByCityName">
                   </a> <!-- testBookingHotelByCityName -->
                   <span class="method-name">testBookingHotelByCityName</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: .datepicker[style*=&apos;display: block&apos;]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-08JE2UC&apos;, ip: &apos;192.168.115.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 65.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 7360, moz:profile: C:\Users\SYurivych\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 7893f886-bf6f-4452-860e-6b0d3875f99e
-*** Element info: {Using=css selector, value=.datepicker[style*=&apos;display: block&apos;]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy16.findElement(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy16.getText(Unknown Source)
-	at com.qagroup.phptravels.ui.DatePicker.getYearMonth(DatePicker.java:106)
-	at com.qagroup.phptravels.ui.DatePicker.getYearOnPage(DatePicker.java:100)
-	at com.qagroup.phptravels.ui.DatePicker.selectYear(DatePicker.java:83)
-	at com.qagroup.phptravels.ui.DatePicker.selectDate_aroundBody0(DatePicker.java:50)
-	at com.qagroup.phptravels.ui.DatePicker$AjcClosure1.run(DatePicker.java:1)
+                  <div class="stack-trace">java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.valueOf(Integer.java:983)
+	at com.qagroup.phptravels.ui.MainBookingPanel.setNumberOfAdults(MainBookingPanel.java:83)
+	at com.qagroup.phptravels.ui.MainBookingPanel.selectAdultsAndChildren_aroundBody8(MainBookingPanel.java:73)
+	at com.qagroup.phptravels.ui.MainBookingPanel$AjcClosure9.run(MainBookingPanel.java:1)
 	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
 	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)
-	at com.qagroup.phptravels.ui.DatePicker.selectDate(DatePicker.java:50)
-	at net.phptravels.booking.BookHotelByCityNameTest.testBookingHotelByCityName(BookHotelByCityNameTest.java:30)
+	at com.qagroup.phptravels.ui.MainBookingPanel.selectAdultsAndChildren(MainBookingPanel.java:73)
+	at net.phptravels.booking.BookHotelByCityNameTest.testBookingHotelByCityName(BookHotelByCityNameTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -199,7 +173,7 @@ Session ID: 7893f886-bf6f-4452-860e-6b0d3875f99e
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\SYurivych\AppData\Local\Temp\testng-eclipse-248366422\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Schkred\AppData\Local\Temp\testng-eclipse-2009136209\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -252,12 +226,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testBookingHotelByCityName')
 data.setCell(0, 2, 'net.phptravels.booking.BookHotelByCityNameTest')
-data.setCell(0, 3, 22987);
+data.setCell(0, 3, 26655);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
