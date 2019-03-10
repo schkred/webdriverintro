@@ -10,34 +10,77 @@ import io.qameta.allure.Step;
 
 public class MainBookingPanel {
 
-	private SearchContext root;
+    private SearchContext root;
 
-	@FindBy(css = "[data-title='hotels']")
-	private WebElement hotelsTab;
+    @FindBy(css = "[data-title='hotels']")
+    private WebElement hotelsTab;
 
-	@FindBy(css = "[name=checkin]")
-	private WebElement checkInField;
+    @FindBy(css = "[name=checkin]")
+    private WebElement checkInField;
 
-	@FindBy(css = "[name=checkout]")
-	private WebElement checkOutField;
+    @FindBy(css = "[name=checkout]")
+    private WebElement checkOutField;
 
-	public MainBookingPanel(WebElement mainBookingPanel) {
-		this.root = mainBookingPanel;
-		PageFactory.initElements(new DefaultElementLocatorFactory(root), this);
-	}
+    @FindBy(id = "travellersInput")
+    private WebElement adultsAndChildrenField;
 
-	@Step("Select 'Hotels' tab on Main booking panel")
-	public void selectHotelsTab() {
-		hotelsTab.click();
-	}
+    @FindBy(id = "adultMinusBtn")
+    private WebElement minusAdultsButton;
 
-	@Step("Open 'Check in' date picker")
-	public void openHotelsCheckIn() {
-		checkInField.click();
-	}
+    @FindBy(id = "adultPlusBtn")
+    private WebElement plusAdultsButton;
 
-	@Step("Open 'Check out' date picker")
-	public void openHotelsCheckOut() {
-		checkOutField.click();
-	}
+    @FindBy(id = "childMinusBtn")
+    private WebElement minusChildrenButton;
+
+    @FindBy(id = "childPlusBtn")
+    private WebElement plusChildrenButton;
+
+    @FindBy(id = "adultInput")
+    private WebElement numberOfAdultsInput;
+
+    @FindBy(id = "childInput")
+    private WebElement numberOfChildrenInput;
+
+    public MainBookingPanel(WebElement mainBookingPanel) {
+        this.root = mainBookingPanel;
+        PageFactory.initElements(new DefaultElementLocatorFactory(root), this);
+    }
+
+    @Step("Select 'Hotels' tab on Main booking panel")
+    public MainBookingPanel selectHotelsTab() {
+        hotelsTab.click();
+        return this;
+    }
+
+    @Step("Open 'Check in' date picker")
+    public void openHotelsCheckInDatePicker() {
+        checkInField.click();
+    }
+
+    @Step("Open 'Check out' date picker")
+    public void openHotelsCheckOutDatePicker() {
+        checkOutField.click();
+    }
+
+    @Step("Open 'Adults and children' picker")
+    public void openAdultsAndChildrenPicker() {
+        adultsAndChildrenField.click();
+    }
+
+    @Step("Set the number of adults and children")
+    public void selectAdultsAndChildren(int adults, int children) {
+        setNumberOfAdults(adults);
+        setNumberOfChildren(children);
+    }
+
+    private void setNumberOfAdults(int adults) {
+        numberOfAdultsInput.clear();
+        numberOfAdultsInput.sendKeys(Integer.toString(adults));
+    }
+
+    private void setNumberOfChildren(int children) {
+        numberOfChildrenInput.clear();
+        numberOfChildrenInput.sendKeys(Integer.toString(children));
+    }
 }
