@@ -1,5 +1,7 @@
 package com.qagroup.phptravels.ui;
 
+import java.util.List;
+
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,8 +17,14 @@ public class MainBookingPanel {
 	@FindBy(css = "[data-title='hotels']")
 	private WebElement hotelsTab;
 	
-	@FindBy(css = "select2-choice")
-	private WebElement searchByHotelOrCityInput;
+	@FindBy(css = "#s2id_autogen8 span.select2-chosen")
+	private WebElement searchByHotelOrCityArea;
+	
+	@FindBy(css = "input select2-focused")
+	private WebElement searchInput;
+	
+	@FindBy(css = "select2-result-sub")
+	private List <WebElement> searchResult;
 
 	@FindBy(css = "[name=checkin]")
 	private WebElement checkInField;
@@ -56,10 +64,26 @@ public class MainBookingPanel {
 		return this;
 	}
 	
-	public void searchByHotelOrCity(String string) {
-		searchByHotelOrCityInput.click();
-		searchByHotelOrCityInput.sendKeys("Dubai");
-		
+	@Step("Search and select a city: {city}")
+	public void searchByHotelOrCity(String city) {
+		enterCity(city);
+		selectResult(city);
+	}
+	
+	@Step("Search for the city: {city}")
+	private void enterCity(String city) {
+		searchByHotelOrCityArea.click();
+		searchInput.sendKeys(city);
+	}
+	
+	@Step("Select {city} from the search results")
+	private void selectResult(String city) {
+		for (WebElement e : searchResult) {
+			if (e.getText().contains(city)) {
+				e.click();
+				break;
+			}
+		}
 	}
 
 	@Step("Open 'Check in' date picker")

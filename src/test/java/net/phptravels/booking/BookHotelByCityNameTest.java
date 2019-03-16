@@ -20,7 +20,7 @@ public class BookHotelByCityNameTest {
 		mainPage = phpTtravelsApp.openMainPage();
 		mainBookingPanel = mainPage.getMainBookingPanel();
 		
-		mainBookingPanel.searchByHotelOrCity("");
+		mainBookingPanel.searchByHotelOrCity("Dubai");
 		
 		mainBookingPanel.selectHotelsTab().openHotelsCheckInDatePicker();
 		datePicker = mainPage.getDatePicker();
