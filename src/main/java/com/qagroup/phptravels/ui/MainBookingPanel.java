@@ -20,7 +20,7 @@ public class MainBookingPanel {
 	@FindBy(css = "#s2id_autogen8 span.select2-chosen")
 	private WebElement searchByHotelOrCityArea;
 	
-	@FindBy(css = "input select2-focused")
+	@FindBy(css = ".select2-drop[style*='display: block'] input.select2-input")
 	private WebElement searchInput;
 	
 	@FindBy(css = "select2-result-sub")
@@ -73,6 +73,7 @@ public class MainBookingPanel {
 	@Step("Search for the city: {city}")
 	private void enterCity(String city) {
 		searchByHotelOrCityArea.click();
+		waitFor(1);
 		searchInput.sendKeys(city);
 	}
 	
@@ -152,5 +153,15 @@ public class MainBookingPanel {
 				currentValue = Integer.valueOf(numberOfAdultsInput.getAttribute("value"));
 			}
 		}
+	}
+	
+	private void waitFor(int seconds) {
+		try {
+			Thread.sleep(seconds * 1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }

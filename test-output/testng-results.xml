@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-03-16T13:06:45Z" name="Default suite" finished-at="2019-03-16T13:07:02Z" duration-ms="16812">
+  <suite started-at="2019-03-25T17:09:43Z" name="Default suite" finished-at="2019-03-25T17:09:59Z" duration-ms="15846">
     <groups>
     </groups>
-    <test started-at="2019-03-16T13:06:45Z" name="Default test" finished-at="2019-03-16T13:07:02Z" duration-ms="16812">
+    <test started-at="2019-03-25T17:09:43Z" name="Default test" finished-at="2019-03-25T17:09:59Z" duration-ms="15846">
       <class name="net.phptravels.booking.BookHotelByCityNameTest">
-        <test-method signature="testBookingHotelByCityName()[pri:0, instance:net.phptravels.booking.BookHotelByCityNameTest@213c3543]" started-at="2019-03-16T13:06:45Z" name="testBookingHotelByCityName" finished-at="2019-03-16T13:07:02Z" duration-ms="16508" status="FAIL">
+        <test-method signature="testBookingHotelByCityName()[pri:0, instance:net.phptravels.booking.BookHotelByCityNameTest@11d4dbd6]" started-at="2019-03-25T17:09:43Z" name="testBookingHotelByCityName" finished-at="2019-03-25T17:09:58Z" duration-ms="15471" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to locate element: input select2-focused
+              <![CDATA[Unable to locate element: .select2-search input.select2-focused
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-GP1ILR2', ip: '192.168.0.182', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+System info: host: 'DESKTOP-08JE2UC', ip: '192.168.115.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 65.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 9304, moz:profile: C:\Users\Schkred\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b3c1083e-d2df-40b4-b7d8-3b86c322fd34
-*** Element info: {Using=css selector, value=input select2-focused}]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 16380, moz:profile: C:\Users\SYurivych\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9b988daf-a471-452c-9b2a-e754ab6cf3bc
+*** Element info: {Using=css selector, value=.select2-search input.select2-focused}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: input select2-focused
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: .select2-search input.select2-focused
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-GP1ILR2', ip: '192.168.0.182', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+System info: host: 'DESKTOP-08JE2UC', ip: '192.168.115.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 65.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 9304, moz:profile: C:\Users\Schkred\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b3c1083e-d2df-40b4-b7d8-3b86c322fd34
-*** Element info: {Using=css selector, value=input select2-focused}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 16380, moz:profile: C:\Users\SYurivych\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9b988daf-a471-452c-9b2a-e754ab6cf3bc
+*** Element info: {Using=css selector, value=.select2-search input.select2-focused}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -52,7 +52,7 @@ at com.sun.proxy.$Proxy16.findElement(Unknown Source)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
-at com.qagroup.phptravels.ui.MainBookingPanel.enterCity_aroundBody4(MainBookingPanel.java:76)
+at com.qagroup.phptravels.ui.MainBookingPanel.enterCity_aroundBody4(MainBookingPanel.java:77)
 at com.qagroup.phptravels.ui.MainBookingPanel$AjcClosure5.run(MainBookingPanel.java:1)
 at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
 at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)
