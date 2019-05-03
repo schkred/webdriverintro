@@ -36,6 +36,7 @@ public class Browser {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("disable-infobars");
+		options.addArguments("--disable-extensions");
 		return new ChromeDriver();
 	}
 
@@ -44,6 +45,7 @@ public class Browser {
 		WebDriverManager.firefoxdriver().setup();
 		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("disable-infobars");
+		options.addArguments("--disable-extensions");
 		return new FirefoxDriver();
 	}
 

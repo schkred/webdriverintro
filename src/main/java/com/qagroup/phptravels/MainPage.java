@@ -23,6 +23,9 @@ public class MainPage extends BasePhpTravelsPage {
 	@FindBy(css = ".cell .col-md-12:not(.col-xs-6)")
 	private WebElement mainBookingPanel;
 
+	@FindBy(css = "#select2-drop input:nth-child(1)")
+	private WebElement searchByHotelCityInput;
+
 	public MainPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -38,5 +41,9 @@ public class MainPage extends BasePhpTravelsPage {
 		WebElement loginOption = myAccountDropdown.findElement(By.xpath(".//a[contains(.,'Login')]"));
 		loginOption.click();
 		return new LoginPage(driver);
+	}
+
+	public WebElement getSearchByHotelCityInput() {
+		return searchByHotelCityInput;
 	}
 }

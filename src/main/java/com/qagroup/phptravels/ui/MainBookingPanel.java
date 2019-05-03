@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 
+import com.qagroup.phptravels.MainPage;
+
 import io.qameta.allure.Step;
 
 public class MainBookingPanel {
@@ -17,13 +19,10 @@ public class MainBookingPanel {
 	@FindBy(css = "[data-title='hotels']")
 	private WebElement hotelsTab;
 	
-	@FindBy(css = "#s2id_autogen8 span.select2-chosen")
+	@FindBy(xpath = "//span[contains(., 'Search by Hotel or City Name')]")
 	private WebElement searchByHotelOrCityArea;
 	
-	@FindBy(css = ".select2-drop[style*='display: block'] input.select2-input")
-	private WebElement searchInput;
-	
-	@FindBy(css = "select2-result-sub")
+	@FindBy(css = ".select2-result-sub")
 	private List <WebElement> searchResult;
 
 	@FindBy(css = "[name=checkin]")
@@ -74,7 +73,7 @@ public class MainBookingPanel {
 	private void enterCity(String city) {
 		searchByHotelOrCityArea.click();
 		waitFor(1);
-		searchInput.sendKeys(city);
+		getSearchByHotelCityInput().sendKeys(city);
 	}
 	
 	@Step("Select {city} from the search results")

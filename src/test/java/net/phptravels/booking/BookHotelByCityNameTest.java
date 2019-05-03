@@ -18,10 +18,11 @@ public class BookHotelByCityNameTest {
 	@Test
 	public void testBookingHotelByCityName() {
 		mainPage = phpTtravelsApp.openMainPage();
+
 		mainBookingPanel = mainPage.getMainBookingPanel();
-		
+
 		mainBookingPanel.searchByHotelOrCity("Dubai");
-		
+
 		mainBookingPanel.selectHotelsTab().openHotelsCheckInDatePicker();
 		datePicker = mainPage.getDatePicker();
 
@@ -40,7 +41,6 @@ public class BookHotelByCityNameTest {
 		try {
 			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\SYurivych\AppData\Local\Temp\testng-eclipse--2053917839\testng-customsuite.xml</span>
+                    <span>C:\Users\SYurovych\AppData\Local\Temp\testng-eclipse--2098868331\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -128,18 +128,17 @@
                   <a name="testBookingHotelByCityName">
                   </a> <!-- testBookingHotelByCityName -->
                   <span class="method-name">testBookingHotelByCityName</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: .select2-search input.select2-focused
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;input id=&quot;s2id_autogen4&quot; class=&quot;select2-focusser select2-offscreen&quot; type=&quot;text&quot;&gt; is not reachable by keyboard
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-08JE2UC&apos;, ip: &apos;192.168.115.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
+System info: host: &apos;DESKTOP-OD8R2LC&apos;, ip: &apos;192.168.89.218&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.1&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 16380, moz:profile: C:\Users\SYurivych\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9b988daf-a471-452c-9b2a-e754ab6cf3bc
-*** Element info: {Using=css selector, value=.select2-search input.select2-focused}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 66.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 27108, moz:profile: C:\Users\SYurovych\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a0ff7372-d928-436d-ada7-8eb9c56a8668
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -147,34 +146,28 @@ Session ID: 9b988daf-a471-452c-9b2a-e754ab6cf3bc
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
-	at org.openqa.selenium.remote.RemoteWebElement.findElementByCssSelector(RemoteWebElement.java:253)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:181)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy16.findElement(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
-	at com.qagroup.phptravels.ui.MainBookingPanel.enterCity_aroundBody4(MainBookingPanel.java:77)
+	at com.qagroup.phptravels.ui.MainBookingPanel.enterCity_aroundBody4(MainBookingPanel.java:78)
 	at com.qagroup.phptravels.ui.MainBookingPanel$AjcClosure5.run(MainBookingPanel.java:1)
 	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
 	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)
-	at com.qagroup.phptravels.ui.MainBookingPanel.enterCity(MainBookingPanel.java:75)
-	at com.qagroup.phptravels.ui.MainBookingPanel.searchByHotelOrCity_aroundBody2(MainBookingPanel.java:69)
+	at com.qagroup.phptravels.ui.MainBookingPanel.enterCity(MainBookingPanel.java:76)
+	at com.qagroup.phptravels.ui.MainBookingPanel.searchByHotelOrCity_aroundBody2(MainBookingPanel.java:70)
 	at com.qagroup.phptravels.ui.MainBookingPanel$AjcClosure3.run(MainBookingPanel.java:1)
 	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
 	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:50)
-	at com.qagroup.phptravels.ui.MainBookingPanel.searchByHotelOrCity(MainBookingPanel.java:69)
+	at com.qagroup.phptravels.ui.MainBookingPanel.searchByHotelOrCity(MainBookingPanel.java:70)
 	at net.phptravels.booking.BookHotelByCityNameTest.testBookingHotelByCityName(BookHotelByCityNameTest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
@@ -205,7 +198,7 @@ Session ID: 9b988daf-a471-452c-9b2a-e754ab6cf3bc
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\SYurivych\AppData\Local\Temp\testng-eclipse--2053917839\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\SYurovych\AppData\Local\Temp\testng-eclipse--2098868331\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -262,12 +255,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testBookingHotelByCityName')
 data.setCell(0, 2, 'net.phptravels.booking.BookHotelByCityNameTest')
-data.setCell(0, 3, 15471);
+data.setCell(0, 3, 14660);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
